@@ -134,6 +134,71 @@ Related to the skill of debugging, there were many times where my knowledge was 
 ### Task planning
 To overcome the challenge of having limited time and lots of desired features and functionality of the app, I utilised strict task planning and prioritisation using Trello. I staggered work so that the most important features and functionality would be complete in time for the project's deadline, and utilised user stories to ensure that the tasks were structured according to an impactful change for the end user of the app.
 
+# Question 6 - Degree of effectiveness of knowledge and skills for personal project
+
+## How effective my knowledge and skills were for building ScooterBay
+
+### Task planning/Project management
+I found that my ability to plan and track tasks in the project proved adequate for completing the project to a good standard in the timeframe provided. I initially assessed the scope of building the MVP and prioritised tasks accordingly. Once the MVP was finished I used the experience of building the MVP to accurately scope the work required to build additional features and functionality. The task planning made it easy to focus efforts on one user story at a time in an Agile fashion.
+
+A desired improvement in task planning/management that I would like to develop is the ability to prioritise and delegate tasks across different contributors in multiple teams for a large project and being more confident in assessing the scope of tasks that I'm not as familiar with.
+
+### Markup language and CSS/Bootstrap
+My knowledge of the markup language HTML and the fundamentals of Cascading Style Sheets was enough to provide a working two-sided marketplace, especially with the use of Bootstrap. Although Bootstrap components make up the majority of the styles, fundamental CSS knowledge such as the box model and flex display were essential in implementing the desired views of the application.
+
+
+A way I would like to improve my knowledge of HTML and the fundamentals of Cascading Style Sheets would be a better understanding of using the CSS grid layout system. I was able to produce working, mobile-responsive views using flexbox and Bootstrap, but with better knowledge about CSS grid I would have been less restricted in my design decisions for the front-end components.
+
+### Model View Controller architecture
+My knowledge of the MVC design pattern was adequate for producing a two-sided-marketplace. I was able to use different model methods and data queries to produce the desired output to the views, and the app functions as intended in deployment.
+
+An improvement I would like to make in my knowledge of MVC is having a greater depth of understanding regarding best-practices and how to structure the models, controllers and views in a way that is more efficient.
+
+### Documentation
+My ability to document the project was enough to provide the important details of what the app does, what it's for and how it was planned and implemented.
+
+An improvement I would like to see in my documentation skills is having a better ability to provide instruction on how to actually use the app.
+
+### Wireframing
+My ability to wireframe was the bare minimum to have understandable visual plans for the layout of ScooterBay. The wireframes were still effective in providing a starting point for designing and implementing the views of ScooterBay which were later adjusted to suit the developing needs of the app.
+
+An improvement I'd like to see in my wireframing skills is surpassing my fear of getting creative and trying out new, different layouts. I found that I was overly focussed in fulfilling the MVP requirements of ScooterBay which restricted my wireframing decisions.
+
+### ERD design
+My ERD design skills were adequate for visually representing the entities to be tracked in ScooterBay and the relationships between them. The entities and their relationships developed throughout the implementations of different features in ScooterBay - I was able to adjust my ERD accordingly and maintain an accurate representation of the entities.
+
+An improvement I would like to make is being able to harness greater visual design of the ERD with design elements like colour and various shapes and effects.
+
+### Sitemap design
+My Sitemap design skills were adequate for visually representing the entities to be tracked in ScooterBay and the relationships between them. There were quite a few different pages to represent in the diagram and I successfully visually represented how they were all linked without using too many connections.
+
+An improvement I would like to make is being able to harness greater visual design of the sitemap with design elements like colour and various shapes and effects.
+
+### Source control
+My source control skills were adequate for completing the project. The remote repository served as a reliable backup for all of my code, and my commits were frequent and meaningful.
+
+An improvement I would love to make in my source control skills is a better understanding of feature branching workflows.
+
+### Deployment
+I was satisfied with my deployment skills in completing the project. I deployed the application in the extremely early stages of development and pushed the changes to the deployed app very frequently so I was able to debug deployment issues quickly and often. I set up heroku so that it pulls changes from my remote github repository everytime I push a commit to the remote repo.
+
+The next time I complete a similar project, I will use a development pipeline instead of pushing directly to the production app.
+
+### Cloud storage
+I was able to use Amazon s3 to store the app's images in the cloud.
+
+A gap in this skill that I would like to fill is being able to give the app access to images in the same s3 bucket that it hasn't uploaded. For static images on the site, I uploaded images to a separate public bucket and had the app render the images stored on the public bucket.
+
+### Manual testing
+I was able to effectively use manual testing to ensure that the app functions as expected. I logged in as several different users at once so that I was able to test the conditional logic of the views, and was able to expose lots of holes in the logic to be fixed. Manual testing was extremely helpful in developing the app and ensuring the app functions as intended.
+
+I was happy with my ability to test the app manually but a major improvement I would like to make is having a much better understanding of automated testing so that the app can be maintained properly and in a more time-efficient way.
+
+### Debugging
+I was able to successfully debug all the errors and bugs that I encountered in developing ScooterBay. This was because when I decided the features and functionality I wanted to implement, I made sure I had an idea of how to successfully implement it.
+
+I would like to improve my debugging skills so that I can debug more complex issues without immediately consulting online resources and try to utilise some more of my own problem solving skills.
+
 ## References
 
 ### Question 1
@@ -143,3 +208,4 @@ Brandon J, 2020, Git Collaboration - Forking Workflow Lesson, Academy of Informa
 ### Question 2
 
 Software Testing Help 2022, What Are The Quality Attributes?, softwaretestinghelp.com, viewed 10 July 2022, <https://www.softwaretestinghelp.com/what-are-the-quality-attributes/>.
+

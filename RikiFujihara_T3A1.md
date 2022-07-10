@@ -120,11 +120,19 @@ Deployment was a skill required to complete the project. Heroku was the service 
 ### Cloud storage
 Cloud storage was a skill required to complete the project. Amazon s3 was used to store the uploaded images used in ScooterBay. Setting up access and environment variables in deployment was required to have the cloud storage function in deployment.
 
+### Manual testing
+Manual testing was a skill required to complete the project. In order to ensure ScooterBay functioned as intended, each feature and function was manually tested by checking the outputs of various inputs and ensuring they remain functional when other features are implemented.
+
+## Overcoming challenges
+
 ### Debugging
 Debugging was a skill required throughout the whole project. Whenever an error occurred, I would use a combination of Rails' helpful error messages and console output to identify the source of the problem and rectify it.
 
-### Manual testing
-Manual testing was a skill required to complete the project. In order to ensure ScooterBay functioned as intended, each feature and function was manually tested by checking the outputs of various inputs and ensuring they remain functional when other features are implemented. 
+### Online research
+Related to the skill of debugging, there were many times where my knowledge was not enough to implement certain features or to achieve certain functionalities. To overcome this challenge I utilised the skill of researching solutions online.
+
+### Task planning
+To overcome the challenge of having limited time and lots of desired features and functionality of the app, I utilised strict task planning and prioritisation using Trello. I staggered work so that the most important features and functionality would be complete in time for the project's deadline, and utilised user stories to ensure that the tasks were structured according to an impactful change for the end user of the app.
 
 ## References
 

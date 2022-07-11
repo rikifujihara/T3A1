@@ -333,11 +333,41 @@ const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
 
 ## Accessing values in an array in Javascript
 
-Square bracket notation is used to access values in JavaScript like in the snippet below.
+Square bracket index notation is used to access values in arrays like in the snippet below. The first value of an array is at index 0 and not 1 - this is because indexing is not the order of elements in an array, but an offset from the beginning of an array. That is, the first element in an array is 0 elements away from the beginning of the array.
 
 ``` javascript
 const array = [] // declares an empty array
 const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array[0] // returns "Cat"
+```
+
+## Array methods in JavaScript
+
+### .length
+The length of an array can be found using the `.length` method, as shown in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array.length // returns 3
+```
+
+.includes
+A value can be passed into the 'includes' method to return a boolean indicicating whether or not the array contains that value, like in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array.includes("Cat") // returns true
+```
+
+.push
+A value can be passed into the 'push' method to return add a value to the end of the array, like in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array.includes("Cat") // returns true
 ```
 
 # Question 11 - How Objects can be manipulated using JavaScript

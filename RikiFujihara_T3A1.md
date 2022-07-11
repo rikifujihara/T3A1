@@ -324,7 +324,7 @@ Javascript notices we are comparing two different data types. When using the dou
 
 ## Declaring an array in Javascript
 
-Arrays are declared in Javascript using square brackets, like in the snippet below. JavaScript arrays are heterogenous, maining different datatypes can be contained in the same array. They can be declared to be initially empty, or they can be declared with initially seeded data.
+Arrays are declared in Javascript using square brackets, like in the snippet below. JavaScript arrays are heterogeneous, maining different data types can be contained in the same array. They can be declared to be initially empty, or they can be declared with initially seeded data.
 
 ``` javascript
 const array = [] // declares an empty array
@@ -353,7 +353,7 @@ array.length() // returns 3
 ```
 
 ### .includes
-A value can be passed into the `includes` method to return a boolean indicicating whether or not the array contains that value, like in the snippet below.
+A value can be passed into the `includes` method to return a boolean indicating whether or not the array contains that value, like in the snippet below.
 
 ``` javascript
 const array = [] // declares an empty array
@@ -412,13 +412,25 @@ array // returns (2) ["Cat, 100]
 ```
 
 ### .concat
-A specific number of items from a specific position can be removed from an array with the `splice` method, like in the snippet below.
+Arrays can be combined using the `concat` method, like in the snippet below.
 
 ``` javascript
-const array = [] // declares an empty array
 const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
-array.splice(1, 2) // removes and returns "Apple", "Sun"
-array // returns (2) ["Cat, 100]
+const array2 = ["Cat", "Sun", 100, "hello"] // declares an array with seeded data
+let combinedArray = array.concat(array2) // combines the two arrays into combinedArray
+combinedArray // returns (8) ["Cat", "Apple", "Sun", 100, "Cat", "Sun", 100, "hello"]
+```
+
+### Set
+
+An array can be built, made up of only the unique values from an existing array using `Set`, like in  the snippet below.
+
+``` javascript
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+const array2 = ["Cat", "Sun", 100, "hello"] // declares an array with seeded data
+let combinedArray = array.concat(array2) // combines the two arrays into combinedArray
+let uniqueArray = Array.from(new Set(combinedArray)) // builds an array with only unique values from combinedArray
+uniqueArray // returns (5) ["Cat", "Apple", "Sun", 100, "hello"]
 ```
 
 ### Returning the last item in an array

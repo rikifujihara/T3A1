@@ -70,7 +70,7 @@ Although this relates to the user experience of the software product itself and 
 
 ## Efficiency
 
-Software should be developed so that it can efficiently utilise resources such as disk-space, processing power and memory. This relates closely to reliability, scalability and usability. Inefficient utilisation of resources will lead to poor scalability, degradation of user experience and less reliable performance. Software can be made more efficient by reducing the number of database queries required to produce the desired output. It can also be improved by optimizing the front-end components of the software such as image sizes. Third-party tools such as Bootstrap can also be reduced down to the components that the software actually uses so that the browser doesn't have to load the many styles that the software doesn't use therefore improving loading times.
+Software should be developed so that it can efficiently utilise resources such as disk-space, processing power and memory. This relates closely to reliability, scalability and usability. Inefficient utilisation of resources will lead to poor scalability, degradation of user experience and less reliable performance. Software can be made more efficient by reducing the number of database queries required to produce the desired output. It can also be improved by optimising the front-end components of the software such as image sizes. Third-party tools such as Bootstrap can also be reduced down to the components that the software actually uses so that the browser doesn't have to load the many styles that the software doesn't use, therefore improving loading times.
 
 ## Integrity/Security
 
@@ -82,7 +82,35 @@ Software reusability relates to how easily the software can be used across other
 
 # Question 3 - MERN stack
 
+
+
 # Question 4 - Knowledge/Skills required to build a website for a small business as part of a team
+
+### Task planning/Project management
+One of the skills that IT workers will need to complete a quality web development project is task/project management. The most popular project management methodology for developing software is the Scrum framework which falls under the Agile methodology, so IT workers will need to be able to work towards fulfilling user stories in an iterative fashion. IT workers should also be able to speak up and communicate clearly throughout retrospectives that will be held throughout the project.
+
+
+### Collaborative source control workflow
+Another skill that IT workers will need to complete a quality web development project is using an effective collaborative source control workflow. A website for a small business is unlikely to require huge organic teams, so a forking workflow is unlikely to be necessary. IT workers will have to be able to frequently ensure that they are working with the latest version of the central repository, and be able to push their code changes from their local repository from feature branches to the central repository. It will also be necessary for IT workers to review each other's code in a way that is productive, helpful and kind before merging the pull requests from the branches into the central repository.
+
+### Quality assurance
+Another skill that IT workers will need to complete a quality web development project is quality assurance. Depending on the maintenance requirements of the website, the team of IT workers may integrate a continuous integration/continuous deployment workflow. In the case that the small business wants a working prototype as soon as possible, the IT workers should integrate a continuous deployment workflow where each change is run against automated tests before being pushed to production. If the small business is happy to wait for a totally finished product, it may only be necessary for the IT workers to simply ensure the site has been properly tested using both manual and automated tests before deeming it ready for use. Assuming the site is static, little maintenance will be required but if it's a more complex app, automated tests should be scheduled to ensure that the app remains functional over long periods.
+
+### Documentation
+Another skill that IT workers will need to complete a quality web development project is documentation. Documentation of the software as well as the project overall will be important to ensure that the IT workers can continue to work on the project in the case of different employees being added or leaving the project. If the software is well documented, other IT workers will be better able to understand how to contribute to the project in the case the original developers are unable to continue the project.
+
+### Liaison
+An extremely important skill that IT workers will need to complete a quality web development project is communication and liaison. Not just for communicating with other IT workers contributing to the project, but for properly understanding the needs of the client. IT workers will need to communicate clearly with their colleagues and their client in order to deliver a quality web development project so that the team can work together efficiently and effectively towards the client's needs.
+
+### HTML/CSS
+Another skill that IT workers will need to complete a quality web development project is the ability to create the basic front-end components of the website. A small business' site will always have views to be displayed in the browser so HTML and CSS will be essential skills for the IT workers. 
+
+### Web development framework
+Depending on the needs of the small business, IT workers may need to have knowledge of some web-development framework in order to complete a quality web-development project. If the small business only needs a static website, then pure HTML and CSS may be enough to deliver a responsive, effective website. If the small business' needs are more nuanced and require more complex functionality such as database management and CRUD actions, a framework such as Ruby on Rails may greatly benefit the project. Having knowledge of a widely used, well-documented framework such as Rails will allow the IT workers to remove lots of abstraction and spend more time building the site towards the client's needs. 
+
+### Deployment
+No matter the needs of the small business, a skill that IT workers will need to deliver a user website is deployment. Even if the small business only needs a static site without CRUD actions, the website still has to be hosted somewhere. If the site is static, a simple service such as netlify could be used to host the site. A more dynamic application would require more nuanced knowledge of a service such as Heroku or even a more flexible solution like AWS.
+
 
 # Question 5 - Knowledge/Skills required to produce a two-sided marketplace web application
 
@@ -208,4 +236,9 @@ Brandon J, 2020, Git Collaboration - Forking Workflow Lesson, Academy of Informa
 ### Question 2
 
 Software Testing Help 2022, What Are The Quality Attributes?, softwaretestinghelp.com, viewed 10 July 2022, <https://www.softwaretestinghelp.com/what-are-the-quality-attributes/>.
+
+### Question 4
+The Agile Coach, What is Agile?, atlassian.com, viewed 11 July 2022, <https://www.atlassian.com/agile>.
+
+
 

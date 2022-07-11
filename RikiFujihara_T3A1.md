@@ -85,19 +85,21 @@ Software reusability relates to how easily the software can be used across other
 ## Structure of a MERN application
 MERN applications use four technologies to create applications - React for the front-end and Mongo, Express and Node.js for the back-end.
 
+MERN has the benefit of only requiring Javascript and JSON since both the client side and server side are written in Javascript.
 
-### Mongo DB
-Mongo is the no-SQL database solution. Instead of records and tables, no-SQL uses 'collections'. A schema is not required and relations are not necessary. For the security reasons, React does not directly connect with the Mongo DB - instead it connects via Node and Express. 
+
+### MongoDB
+Mongo is the no-SQL database solution. Instead of records and tables, no-SQL uses 'collections'. A schema is not required and relations are not necessary. For the security reasons, React does not directly connect with the MongoDB - instead it connects via Node and Express. 
 
 ### React
-React handles the front-end component of MERN applications and allows seamless production of Single Page Applications. In a single page application, React helps with loading and rendering only specific parts of the page in response to inputs from the user without having to reload the entire page. React works on the client (broswer side) instead of on the server side like Node. It essentially handles the front-end component of the application's user interface, responding to different inputs an dynamically controlling what is displayed to the user from the client side. React could be swapped with another front-end client side library such as Angular which would produce a MEAN stack.
+React handles the front-end component of MERN applications and allows seamless production of Single Page Applications. In a single page application, React helps with loading and rendering only specific parts of the page in response to inputs from the user without having to reload the entire page. React works on the client (browser side) instead of on the server side like Node. It essentially handles the front-end component of the application's user interface, responding to different inputs and dynamically controlling what is displayed to the user from the client side. React could be swapped with another front-end client side library such as Angular which would produce a MEAN stack.
 
 
 ### Node.js
-Node.js is a Javascript runtime which powers the back end of MERN application. Node handles the backend responsibilities such as intereactions with the database and interacting with the DOM. Node's capabilities can be augmented by 'Node packages' handled by NPM (Node Package Manager) to suit the needs of the MERN application. 
+Node.js is a Javascript runtime which powers the back end of MERN application. Node handles the backend responsibilities such as interactions with the database and interacting with the DOM. Node's capabilities can be augmented by 'Node packages' handled by NPM (Node Package Manager) to suit the needs of the MERN application. 
 
 ### Express
-Express is a framwork for Node.js which makes building Node.js applications more streamlined and easier. It also allows the building of REST APIs. REST APIs are a way for servers and clients to exchange data.
+Express is a framework for Node.js which makes building Node.js applications more streamlined and easier. It also allows the building of REST APIs. REST APIs are a way for servers and clients to exchange data.
 
 
 # Question 4 - Knowledge/Skills required to build a website for a small business as part of a team
@@ -259,7 +261,8 @@ IBM technology, What is the MERN stack?, youtube.com, viewed 11 July 2022, <http
 
 YakoHERE, What is the MERN stack?, youtube.com, viewed 11 July 2022, <https://www.youtube.com/watch?v=INyYiwK58mc>.
 
-YakoHERE, What is the MERN stack?, youtube.com, viewed 11 July 2022, <https://www.youtube.com/watch?v=jeNXbJq5o5g>.
+
+Code with Ania Kubów, What is the MERN stack?, youtube.com, viewed 11 July 2022, <https://www.youtube.com/watch?v=jeNXbJq5o5g>.
 
 ### Question 4
 The Agile Coach, What is Agile?, atlassian.com, viewed 11 July 2022, <https://www.atlassian.com/agile>.

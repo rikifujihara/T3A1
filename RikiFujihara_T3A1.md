@@ -247,64 +247,29 @@ I would like to improve my debugging skills so that I can debug more complex iss
 
 # Question 7 - Control Flow
 
-Lines of code are generally executed from top to bottom, but in circumstances where the program needs to respond in different ways depending on more than one possible outcome, "control flow" is needed.
+Control flow is the control of whether or not different pieces of code get executed. Code is run line by line from top to bottom, until it runs into code with some form of condition which changes the flow of the execution.
 
-Let's say you want a program to tell you whether or not you should bring an umbrella when you go outside.
+Some of the most common forms of conditional statements in JavaScript include the following:
 
-The program would need to contain at least the following:
+``` javascript
 
-- Take an umbrella outside
-- Don't take an umbrella outside
-
-These are both necessary in order to make the program useful, but if both of them were to be executed then the program couldn't provide anything meaningful. This is where control flow comes in.
-
-Without using control-flow, the program might execute like this:
-
-- ask user if it's raining outside
-- user enters 'yes'
-- print "you should take an umbrella outside"
-- print "don't take an umbrella outside"
-
-That's not much use. The problem is that the user can enter yes, in which case the program would have to print "you should take an umbrella outside" but they can also enter "no" in which case the program has to print "don't take an umbrella outside". There are two different responses that need to be stored in the program which need to be in response to more than one possible outcome.
-
-Control flow is needed to solve this problem. In other words, if a certain condition is met, we need to perform one task, and not another.
-
-If the user enters that it is, in fact, raining, the program needs to print a particular statement and not both statements contained in the program.
-
-This umbrella program might look something like this in Ruby code:
-
-``` ruby
-#Asks user if it's raining
-
-puts "Is it raining outside?"
-
-#Stores what the user enters in a variable
-raining = gets.chomp
-
-#Gives a response depending on what the user says
-if raining == "yes"
-    #This prints if the user enters "yes"
-    puts "you should take an umbrella"
-elsif raining == "no"
-    #This prints if the user enters "no"
-    puts "you should not take an umbrella"
-else
-    #This will print if the user says something other than "yes" or "no"
-    puts "I don't know what you mean, sorry!"
+if // executes code between 'if' and 'end' if the condition is met
+end
+if else // executes code between 'if' and 'else' if the condition is met, and executes the code between 'else' and 'end' if the condition is not met
+end
+if elseif // executes code between 'if' and 'else' if the condition is met, otherwise checks the condition for the elseif, and executes the next block of code if it is met.
+end
+end
+while // executes the code between 'while' and 'end' repeatedly until the condition is not met. After each iteration the computer will check the condition and repeat the block of code if the condition is still met. Need to watch out for infinite loops
+end
+switch // like a case statement in Ruby, this conditional satement allows the specification of various conditions under which to execute different pieces of code. Useful when there are many possible outcomes that specific code is needed for, which avoids having a verbose if/elseif statement with too many elseifs.
+end
+for
 end
 
+
+
 ```
-
-The program might execute like this:
-
-- Program asks the user "is it raining outside?"
-- The user enters "yes"
-- The program prints "you should take an umbrella"
-
-This is good because the program was able to print just "you should take an umbrella" and not "you should not take an umbrella", in response to the input from the user.
-
-This was all thanks to a statement called the 'if' statement in Ruby that is used for control flow. The 'if' statement allows the program to execute the code depending on 'conditionals'. In this example, the conditional was whether or not it's raining. If it's raining, different behaviour is required from the program than if it's not raining. So, the 'if' statement checks whether it's raining. If it is raining, the program will execute the code under the `if` portion and not the rest of the if statement. If it's not raining, the program will execute the portion of code under the `elsif` and not the other parts of the statement. Finally, if the user enters something other than "yes" or "no" the program will execute the code under the `else` portion of the if statement. 
-
 
 # Question 8 - Type Coercion
 
@@ -591,5 +556,10 @@ Code with Ania Kubów, What is the MERN stack?, youtube.com, viewed 11 July 2022
 ### Question 4
 The Agile Coach, What is Agile?, atlassian.com, viewed 11 July 2022, <https://www.atlassian.com/agile>.
 
+### Question 7
+Power B, 2020, JS Conditionals, Academy of Information Technology
+
 ### Question 10
 Etherington M, 2020, JS Intro, Academy of Information Technology
+
+Power B, 2020, JS Conditionals, Academy of Information Technology

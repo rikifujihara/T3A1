@@ -249,26 +249,167 @@ I would like to improve my debugging skills so that I can debug more complex iss
 
 Control flow is the control of whether or not different pieces of code get executed. Code is run line by line from top to bottom, until it runs into code with some form of condition which changes the flow of the execution.
 
+## Control flow statements
+
 Some of the most common forms of conditional statements in JavaScript include the following:
 
 ``` javascript
+if // executes the block of code if the condition is met
 
-if // executes code between 'if' and 'end' if the condition is met
-end
-if else // executes code between 'if' and 'else' if the condition is met, and executes the code between 'else' and 'end' if the condition is not met
-end
-if elseif // executes code between 'if' and 'else' if the condition is met, otherwise checks the condition for the elseif, and executes the next block of code if it is met.
-end
-end
-while // executes the code between 'while' and 'end' repeatedly until the condition is not met. After each iteration the computer will check the condition and repeat the block of code if the condition is still met. Need to watch out for infinite loops
-end
-switch // like a case statement in Ruby, this conditional satement allows the specification of various conditions under which to execute different pieces of code. Useful when there are many possible outcomes that specific code is needed for, which avoids having a verbose if/elseif statement with too many elseifs.
-end
-for
-end
+if else // executes the block of code if the condition is met, and executes the code between 'else' and 'end' if the condition is not met
+
+if elseif // executes the block of code if the condition is met, otherwise checks the condition for the elseif, and executes the next block of code if it is met.
 
 
+while // executes the block of code repeatedly until the condition is not met. After each iteration the computer will check the condition and repeat the block of code if the condition is still met. Need to watch out for infinite loops
 
+switch // like a case statement in Ruby, this conditional statement allows the specification of various conditions under which to execute different pieces of code. Useful when there are many possible outcomes that specific code is needed for, which avoids having a verbose if/elseif statement with too many else ifs. 
+```
+
+The syntax for a conditional statement in JavaScript is in the snippet below. After the conditional statement keyword (in this case, `if`), a certain condition is specified. If the condition is met, the code between the curled braces will be executed. If the condition is not met, the block of code in the braces will be ignored.
+
+``` javascript
+if (some condition) {
+    // block of code
+}
+```
+
+An example demonstrates how an `if` statement would work in the snippet below.
+
+``` javascript
+let pet = "Cute" // "Cute" is assigned to variable `pet`
+
+if (pet == "Cute") { // program checks if the value assigned to `pet` equals "Cute"
+    console.log("Aw, that pet is very cute")
+}
+
+// `pet` equals "Cute" so "Aw, that pet is very cute" will be outputted to the console
+
+```
+
+## Conditions being true and false
+Code blocks within conditional statements are run depending on whether or not the conditions are met. That is, whether the condition specified evaluates to true or false. What evaluates to true and false differs across programming languages so it's important to understand the boolean rules for the language that you're working with.
+
+### Falsey values in JavaScript
+
+The following values evaluate to `falsey` in JavaScript - if a condition evaluates to one of these, the block of code in the conditional statement will not be executed.
+
+``` javascript
+false // false is falsey
+0 // Zero is falsey
+"" // an empty string is falsey
+NaN // 'not a number' is falsey
+null // 'null' is an absence of any value which is falsey
+undefined // 'undefined' is when a variable hasn't been declared or has not been assigned a value (is falsey)
+```
+
+### Comparison operators
+
+The following comparison operators can be used in control flow statements to make up the comparisons that make up the conditions.
+
+``` javascript
+== // double equals compares two values without comparing the datatype.
+=== // triple equals or 'strict equality' compares two values while considering the datatype.
+< // 'less than' checks if the value on the left of the symbol is smaller than the value on the right of the symbol
+<= // 'less than or equal to' checks if the value on the left of the symbol is smaller or the same size as value on the right of the symbol
+< // 'greater than' checks if the value on the left of the symbol is greater than the value on the right of the symbol
+<= // 'greater than or equal to' checks if the value on the left of the symbol is greater than or the same size as value on the right of the symbol
+! // the 'not' operator checks the opposite of a certain result, so ( ! (1 > 2)) would evaluate to true
+```
+
+### &&
+
+The 'and' (`&&`) operator in JavaScript is used to combine two conditions. Only if both conditions are true, will the combined condition evaluate to true.
+
+``` javascript
+if ((condition) && (condition)) { // there are two conditions in this statement - if both are true, then the code will be executed
+
+    //code to be executed
+}
+```
+
+### ||
+
+The 'or' (`||`) operator in JavaScript is used to combine two conditions. Only one of the conditions needs to be true for the overall condition to evaluate to true.
+
+``` javascript
+if ((condition) || (condition)) { // there are two conditions in this statement - only one of the conditions need to be true for the code to be executed
+
+    //code to be executed
+}
+```
+
+### else
+
+The `if` statement by itself often doesn't provide the nuance required for many situations - an `else` adds much needed logic to the control flow. The program will check if the first conditional evaluates to true, and if it doesn't, it will run the code following the `else` statement.
+
+``` javascript
+if (some condition) { // if this condition evaluates the false, the program will not execute the code
+    // block of code
+} else { // 
+    // block of code here will be run if the above conditional is false
+}
+```
+
+### else if
+
+`else if` builds further control flow capability by allowing the control flow statement to check for more than one condition. The program will check if the first conditional evaluates to true, and if it doesn't, it will check the next statement, and so forth. An `else` can be added to specify the code to be run if none of the conditionals in the `else if`s are true.
+
+``` javascript
+if (some condition) { // if this condition evaluates the false, the program will not execute the code
+    // block of code
+} else if{ //  this condition will be checked if the above condition is false
+    // block of code to be run if the else if condition is true
+} else {
+ // block of code here will be run if none of the above conditions are met
+}
+```
+
+### switch statement
+
+A switch statement is very useful avoiding a huge chain of else if statements when a condition needs to be compared against many conditions. This prevents the computer from having to check every piece of `else if` logic sequentially. The computer is able to 'jump' to the case that evaluates to true, which saves processing time, whereas an elsif's statements have to be checked one by one until one of them is true.
+
+``` javascript
+let variable = "value"
+
+switch (variable) { // the variable in the brackets will be compared to the different cases
+    case "different_value1":
+        // This code will not be executed because variable does not equal "value"
+        break;
+    case "different_value2":
+        // This code will not be executed because variable does not equal "value"
+        break;
+    case "value":
+        // This code will be executed because the variable equals "value"
+        break;
+    default:
+        // code here will be executed when none of the cases comparisons are true
+        break;
+}
+```
+
+## Loops
+
+Loops control the flow of code by having a block of code repeat in a given way. An example of a conditional loop in JavaScript is a `for` statement.
+
+### for
+
+The for statement accommodates three statements to control the logic of the block. The first statement gets executed once before executing the rest of the block - a variable might be assigned here. The second statement contains the actual condition for whether or not the rest of the code block is to be executed, and the third statement contains code that will be executed on each iteration of the block's execution. This could be some sort of increment in a value. This would be some sort of incrementation so that the loop doesn't continue forever.
+
+``` javascript
+for (first_statement; second_statement ; third_statement){
+    //code to be executed
+}
+```
+
+### while
+
+The while loop has a more simple syntactic structure than the for loop - the code in the block is executed repeatedly until the condition specifies no longer evaluates to true. The computer will check the condition on each iteration of the loop. It's important that there's some form of incrementation that happens within the block to avoid an infinite loop.
+
+``` javascript
+while (condition){
+    //code to be executed if the condition is true
+}
 ```
 
 # Question 8 - Type Coercion
@@ -276,9 +417,7 @@ end
 - Double equality operator
 
 ``` javascript
-
 123 == "123"
-
 ```
 
 Javascript notices we are comparing two different data types. When using the double equals operator, JS will change the datatype of one of the elements to match the other, and then perform the comparison. 
@@ -558,6 +697,15 @@ The Agile Coach, What is Agile?, atlassian.com, viewed 11 July 2022, <https://ww
 
 ### Question 7
 Power B, 2020, JS Conditionals, Academy of Information Technology
+
+MDN Web Docs, Null, developer.mozilla.org, viewed 12 July 2022, <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null>.
+
+W3Schools, JavaScript undefined, w3schools.com, viewed 12 July 2022, <https://www.w3schools.com/jsref/jsref_undefined.asp#:~:text=The%20undefined%20property%20indicates%20that,or%20not%20declared%20at%20all>.
+
+W3Schools, The For Loop, w3schools.com, viewed 12 July 2022, <https://www.w3schools.com/js/js_loop_for.asp>.
+W3Schools, The While Loop, w3schools.com, viewed 12 July 2022, <https://www.w3schools.com/js/js_loop_while.asp>.
+
+Powers B, 2020, JS Loops, Academy of Information Technology
 
 ### Question 10
 Etherington M, 2020, JS Intro, Academy of Information Technology

@@ -247,7 +247,7 @@ I would like to improve my debugging skills so that I can debug more complex iss
 
 # Question 7 - Control Flow
 
-In circumstances where a program needs to respond to certain input in different ways depending on more than one possible outcome, "control flow" is needed.
+Lines of code are generally executed from top to bottom, but in circumstances where the program needs to respond in different ways depending on more than one possible outcome, "control flow" is needed.
 
 Let's say you want a program to tell you whether or not you should bring an umbrella when you go outside.
 
@@ -306,6 +306,168 @@ This is good because the program was able to print just "you should take an umbr
 This was all thanks to a statement called the 'if' statement in Ruby that is used for control flow. The 'if' statement allows the program to execute the code depending on 'conditionals'. In this example, the conditional was whether or not it's raining. If it's raining, different behaviour is required from the program than if it's not raining. So, the 'if' statement checks whether it's raining. If it is raining, the program will execute the code under the `if` portion and not the rest of the if statement. If it's not raining, the program will execute the portion of code under the `elsif` and not the other parts of the statement. Finally, if the user enters something other than "yes" or "no" the program will execute the code under the `else` portion of the if statement. 
 
 
+# Question 8 - Type Coercion
+
+- Double equality operator
+
+``` javascript
+
+123 == "123"
+
+```
+
+Javascript notices we are comparing two different data types. When using the double equals operator, JS will change the datatype of one of the elements to match the other, and then perform the comparison. 
+
+# Question 9 - Datatypes
+
+# Question 10 - How Arrays can be manipulated using JavaScript
+
+## Declaring an array in Javascript
+
+Arrays are declared in Javascript using square brackets, like in the snippet below. JavaScript arrays are heterogenous, maining different datatypes can be contained in the same array. They can be declared to be initially empty, or they can be declared with initially seeded data.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+```
+
+## Accessing values in an array in Javascript
+
+Square bracket notation is used to access values in JavaScript like in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+```
+
+# Question 11 - How Objects can be manipulated using JavaScript
+
+## Assigning Objects in Javascript
+Javascript objects can be assigned in Javascript using curly braces like in the example below.
+
+``` javascript
+const foo = {
+    property1: "value"
+}
+```
+
+Javascript values assigned to an object's properties can also be further objects like in the example below.
+
+``` javascript
+const foo = {
+    property1: "value",
+    property2: {
+        property2attribute: "value",
+        property2attribute: "value"
+    }
+}
+```
+## Retrieving values from objects in JavaScript
+Square bracket notation is used to retrieve values from Javascript objects, using the key to access the desired value.
+
+``` javascript
+const foo = {
+    property1: "value1",
+    property2: {
+        property2attribute1: "value2",
+        property2attribute2: "value3"
+    }
+}
+
+foo["property1"] // returns "value1"
+
+```
+
+Aside from bracket notation, 'dot notation' can be also be used to access an object's properties like in the example below.
+
+``` javascript
+const foo = {
+    property1: "value1",
+    property2: {
+        property2attribute1: "value2",
+        property2attribute2: "value3"
+    }
+}
+
+foo.property1 // returns "value1"//
+```
+
+Dot notation can also be chained to retrieve nested values, like in the example below.
+
+``` javascript
+const foo = {
+    property1: "value1",
+    property2: {
+        property2attribute1: "value2",
+        property2attribute2: "value3"
+    }
+}
+
+foo.property2.property2attribute1 // returns "value2"//
+
+```
+## Changing values in an Object using JavaScript
+Anything within the object can be changed with assignment using the same bracket and dot notation to access the values, like in the example below.
+
+``` javascript
+const foo = {
+    property1: "value1",
+    property2: {
+        property2attribute1: "value2",
+        property2attribute2: "value3"
+    }
+}
+
+foo.property2.property2attribute1 // returns "value2"//
+foo.property2.property2attribute1 = "changed value" // assigns a new value to (property2attribute1)//
+foo.property2.property2attribute1 // returns "changed value"//
+
+```
+
+
+
+# Question 12 - How JSON can be manipulated using JavaScript
+
+# Question 13 - Functions, Ranges and Classes
+
+```
+class Car {
+  constructor(brand) {
+    this.carname = brand;
+  }
+  present() {
+    return 'I have a ' + this.carname;
+  }
+}
+
+class Model extends Car {
+  constructor(brand, mod) {
+    super(brand);
+    this.model = mod;
+  }
+  show() {
+    return this.present() + ', it was made in ' + this.model;
+  }
+}
+
+let makes = ["Ford", "Holden", "Toyota"]
+let models = Array.from(new Array(40), (x,i) => i + 1980)
+
+function randomIntFromInterval(min,max) { // min and max included
+    return Math.floor(Math.random()*(max-min+1)+min);
+}
+
+for (model of models) {
+
+  make = makes[randomIntFromInterval(0,makes.length-1)]
+  model = models[randomIntFromInterval(0,makes.length-1)]
+
+  mycar = new Model(make, model);
+  console.log(mycar.show())
+}
+```
+
+
 ## References
 
 ### Question 1
@@ -326,6 +488,3 @@ Code with Ania Kubów, What is the MERN stack?, youtube.com, viewed 11 July 2022
 
 ### Question 4
 The Agile Coach, What is Agile?, atlassian.com, viewed 11 July 2022, <https://www.atlassian.com/agile>.
-
-
-

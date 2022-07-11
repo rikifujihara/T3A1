@@ -349,11 +349,11 @@ The length of an array can be found using the `.length` method, as shown in the 
 ``` javascript
 const array = [] // declares an empty array
 const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
-array.length // returns 3
+array.length() // returns 3
 ```
 
-.includes
-A value can be passed into the 'includes' method to return a boolean indicicating whether or not the array contains that value, like in the snippet below.
+### .includes
+A value can be passed into the `includes` method to return a boolean indicicating whether or not the array contains that value, like in the snippet below.
 
 ``` javascript
 const array = [] // declares an empty array
@@ -361,13 +361,73 @@ const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
 array.includes("Cat") // returns true
 ```
 
-.push
-A value can be passed into the 'push' method to return add a value to the end of the array, like in the snippet below.
+### .push
+A value can be passed into the `push` method to add a value to the end of the array, like in the snippet below.
 
 ``` javascript
 const array = [] // declares an empty array
 const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
-array.includes("Cat") // returns true
+array.push("Dog") // adds "Dog" to the end of the array
+array // returns (5) ["Cat", "Apple", "Sun", 100, "Dog"]
+```
+
+### .unshift
+A value can be passed into the `unshift` method to add a value to the beginning of the array, like in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array.unshift("Dog") // adds "Dog" to the beginning of the array
+array // returns (5) [ "Dog", "Cat", "Apple", "Sun", 100]
+```
+
+### .pop
+The `pop` method can be used on an array to remove and return the last element of an array, like in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array.pop() // removes 100 from the end of the array and returns 100
+array // returns (3) ["Cat", "Apple", "Sun"]
+```
+
+### .shift
+The `shift` method can be used on an array to remove and return the first element of an array, like in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array.shift() // removes "Cat" from the beginning of the array and returns "Cat"
+array // returns (3) ["Apple", "Sun", 100]
+```
+
+### .splice
+A specific number of items from a specific position can be removed from an array with the `splice` method, like in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array.splice(1, 2) // removes and returns "Apple", "Sun"
+array // returns (2) ["Cat, 100]
+```
+
+### .concat
+A specific number of items from a specific position can be removed from an array with the `splice` method, like in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array.splice(1, 2) // removes and returns "Apple", "Sun"
+array // returns (2) ["Cat, 100]
+```
+
+### Returning the last item in an array
+The last element in the array can be returned by combining bracket notation with the `length` method, like in the snippet below.
+
+``` javascript
+const array = [] // declares an empty array
+const array = ["Cat", "Apple", "Sun", 100] // declares an array with seeded data
+array[array.length - 1] // returns 100
 ```
 
 # Question 11 - How Objects can be manipulated using JavaScript
@@ -518,3 +578,6 @@ Code with Ania Kubów, What is the MERN stack?, youtube.com, viewed 11 July 2022
 
 ### Question 4
 The Agile Coach, What is Agile?, atlassian.com, viewed 11 July 2022, <https://www.atlassian.com/agile>.
+
+### Question 10
+Etherington M, 2020, JS Intro, Academy of Information Technology

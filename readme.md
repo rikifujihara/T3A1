@@ -424,6 +424,38 @@ Javascript notices we are comparing two different data types. When using the dou
 
 # Question 9 - Data types
 
+```
+feedback from prev workbook on same question - Response identifies a number of data types/structures but could do more to explain the concept of data types and why they are used over a global type. What do these example data types look like in practice or code snippets?
+```
+
+Data types in programming refer to how a variable's data is classified. The classification of the data, or data type, will determine what kind of operations can be performed with it and how they will be performed without causing an error.
+
+Without datatypes, programmers wouldn't be able to perform operations on values in the way that they intend. For example, in the code snippet below, we try to perform mathematical addition with the two variables in JavaScript, `foo` and `bar`.
+
+``` javascript
+let foo = "10"
+let bar = "10"
+
+let together = foo + bar
+together // returns "1010"
+```
+
+As the programmer, we are trying to add the numbers `10` and `10` and are hoping for the result `20`. But the program is executing according to the data types assigned which are `strings`. If we change the type of the `"10"`s to floats, we will be able to perform the mathematical operation on them.
+
+``` javascript
+let foo = 10
+let bar = 10
+
+let together = foo + bar
+together // returns 20
+```
+
+Without the concept of data types in programming, we wouldn't be able to stricly specify how we want data operations to be handled.
+
+## Other data types in JavaScript
+
+
+
 # Question 10 - How Arrays can be manipulated using JavaScript
 
 ## Declaring an array in Javascript
@@ -828,6 +860,11 @@ W3Schools, The For Loop, w3schools.com, viewed 12 July 2022, <https://www.w3scho
 W3Schools, The While Loop, w3schools.com, viewed 12 July 2022, <https://www.w3schools.com/js/js_loop_while.asp>.
 
 Powers B, 2020, JS Loops, Academy of Information Technology
+
+### Question 9
+TechTarget, data type, techtarget.com, viewed 13 July 2022, <https://www.techtarget.com/searchapparchitecture/definition/data-type#:~:text=A%20data%20type%2C%20in%20programming,it%20without%20causing%20an%20error.>.
+
+MDN Web Docs, JavaScript data types and data structures, developer.mozilla.org, viewed 13 July 2022, <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures>.
 
 ### Question 10
 Etherington M, 2020, JS Intro, Academy of Information Technology

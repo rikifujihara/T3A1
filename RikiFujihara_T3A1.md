@@ -630,28 +630,64 @@ foo.property2.property2attribute1 // returns "changed value"//
 
 ```
 
+## Object construction in JavaScript
+
+Properties of an object can be defined using the `this` keyword in JavaScript. An example is shown in the snippet below.
+
+``` javascript
+function Car(year, price) { // this line defines a named function with two parameters
+    this.year = year; // this line self-refers using the `this` keyword and assigns the parameter to the attribute
+    this.price = price; // this line self-refers using the `this` keyword and assigns the parameter to the attribute
+}
+
+let coupe = new Car("2000", "$5000") // this creates a new instance of the Car object with the parameters as its properties
+```
+
+## Object composition in JavaScript
+
+Objects can be combined into one by using `Object.assign`, like in the snippet below. The objects passed into `Object.assign` as paramters will be combined into one new object, with the order of the parameters being the order of overriding. That is, an object passed in after another object will override the common attributes they have.
+
+``` javascript
+const car = {
+    brand: "Toyota"
+    year: "2007"
+}
+const superCar = {
+    brand: "Ferarri"
+    horsepower: "700"
+}
+const fourWheelDrive = {
+    brand: "Range Rover"
+    fourWheelDrive: true
+}
+
+let coolCar = Object.assign(car, superCar, fourWheelDrive)
+console.log(coolCar) // will return:
+
+// {brand: "Ferarri", year: "2007", horsepower: "700",  fourWheelDrive: true}
+```
 
 
 # Question 12 - How JSON can be manipulated using JavaScript
 
 # Question 13 - Functions, Ranges and Classes
 
-```
-class Car {
-  constructor(brand) {
-    this.carname = brand;
+``` javascript
+class Car { // in this line, a class called 'Car' is being defined.
+  constructor(brand) { // `constructor` defines the block of code that will be run when a new instance of Car is created and takes 'brand' as a parameter
+    this.carname = brand; // `this`is self-referring in order to declare that whatever is passed into the paramater 'brand' is assigned to the object's 'carname' attribute
   }
-  present() {
-    return 'I have a ' + this.carname;
+  present() { // in this line, a function called 'present' is being defined.
+    return 'I have a ' + this.carname; // `this`is self-referring to access the current Car object's carname attribute
   }
 }
 
-class Model extends Car {
-  constructor(brand, mod) {
-    super(brand);
-    this.model = mod;
+class Model extends Car { // here an class called 'Model' is being defined, and is inheriting all of the properties from the Car class
+  constructor(brand, mod) { // `constructor` defines the block of code that will be run when a new instance of Car is created and takes 'brand' as a parameter
+    super(brand); // this line executes the super class' function 
+    this.model = mod; // `this`is self-referring in order to declare that whatever is passed into the paramater 'mod' is assigned to the object's 'model' attribute
   }
-  show() {
+  show() { // in this line, a function called 'present' is being defined.
     return this.present() + ', it was made in ' + this.model;
   }
 }
@@ -711,3 +747,11 @@ Powers B, 2020, JS Loops, Academy of Information Technology
 Etherington M, 2020, JS Intro, Academy of Information Technology
 
 Power B, 2020, JS Conditionals, Academy of Information Technology
+
+### Question 11
+
+Etherington M, 2020, JS Classes and Mixins, Academy of Information Technology
+
+### Question 13 
+
+Etherington M, 2020, JS Classes and Mixins, Academy of Information Technology

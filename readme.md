@@ -424,10 +424,6 @@ Javascript notices we are comparing two different data types. When using the dou
 
 # Question 9 - Data types
 
-```
-feedback from prev workbook on same question - Response identifies a number of data types/structures but could do more to explain the concept of data types and why they are used over a global type. What do these example data types look like in practice or code snippets?
-```
-
 Data types in programming refer to how a variable's data is classified. The classification of the data, or data type, will determine what kind of operations can be performed with it and how they will be performed without causing an error.
 
 Without datatypes, programmers wouldn't be able to perform operations on values in the way that they intend. For example, in the code snippet below, we try to perform mathematical addition with the two variables in JavaScript, `foo` and `bar`.
@@ -450,11 +446,59 @@ let together = foo + bar
 together // returns 20
 ```
 
-Without the concept of data types in programming, we wouldn't be able to stricly specify how we want data operations to be handled.
+Without the concept of data types in programming, we wouldn't be able to strictly specify how we want data operations to be handled.
 
 ## Other data types in JavaScript
+JavaScript is a dynamically typed language, meaning variables can be freely reassigned to different data types.
 
+### String
 
+Strings represent text.
+
+``` javascript
+let foo = "Hello world!"
+```
+
+### Boolean
+
+Booleans represent values that are either `true` or `false`.
+
+``` javascript
+let foo_true = true
+let foo_false = false
+```
+
+### Null
+
+The `null` type is made up only of itself. When a value is of the `null` data type it means there is an intentional absence of any object value. `null` evaluates as `falsey` in boolean operations.
+
+``` javascript
+let foo = null
+```
+
+### Undefined
+
+Values of the `undefined` data type have not been assigned any data.
+
+``` javascript
+let foo = undefined
+```
+
+### Number
+
+Values of the `number` data type represent floating point numbers (numbers with a decimal). JavaScript does not have an integer data type (whole numbers).
+
+``` javascript
+let foo = 10
+```
+
+### NaN
+
+`NaN` or "not a number" is the data type resulting from an arithmetic operation that doesn't produce a value expressible by a number.
+
+``` javascript
+let foo = NaN
+```
 
 # Question 10 - How Arrays can be manipulated using JavaScript
 
@@ -865,6 +909,8 @@ Powers B, 2020, JS Loops, Academy of Information Technology
 TechTarget, data type, techtarget.com, viewed 13 July 2022, <https://www.techtarget.com/searchapparchitecture/definition/data-type#:~:text=A%20data%20type%2C%20in%20programming,it%20without%20causing%20an%20error.>.
 
 MDN Web Docs, JavaScript data types and data structures, developer.mozilla.org, viewed 13 July 2022, <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures>.
+
+MDN Web Docs, Null, developer.mozilla.org, viewed 13 July 2022, <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/null>.
 
 ### Question 10
 Etherington M, 2020, JS Intro, Academy of Information Technology

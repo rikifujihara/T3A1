@@ -89,7 +89,7 @@ MERN has the benefit of only requiring Javascript and JSON since both the client
 
 
 ### MongoDB
-Mongo is the no-SQL database solution. Instead of records and tables, no-SQL uses 'collections'. A schema is not required and relations are not necessary. For the security reasons, React does not directly connect with the MongoDB - instead it connects via Node and Express. 
+Mongo is the no-SQL database solution. Instead of records and tables, no-SQL uses 'collections'. A schema is not required and relations are not necessary. For security reasons, React does not directly connect with MongoDB - instead it connects via Node and Express. 
 
 ### React
 React handles the front-end component of MERN applications and allows seamless production of Single Page Applications. In a single page application, React helps with loading and rendering only specific parts of the page in response to inputs from the user without having to reload the entire page. React works on the client (browser side) instead of on the server side like Node. It essentially handles the front-end component of the application's user interface, responding to different inputs and dynamically controlling what is displayed to the user from the client side. React could be swapped with another front-end client side library such as Angular which would produce a MEAN stack.
@@ -422,7 +422,7 @@ while (condition){
 
 Javascript notices we are comparing two different data types. When using the double equals operator, JS will change the datatype of one of the elements to match the other, and then perform the comparison. 
 
-# Question 9 - Datatypes
+# Question 9 - Data types
 
 # Question 10 - How Arrays can be manipulated using JavaScript
 
@@ -678,24 +678,24 @@ class Car { // in this line, a class called 'Car' is being defined.
     this.carname = brand; // `this`is self-referring in order to declare that whatever is passed into the paramater 'brand' is assigned to the object's 'carname' attribute
   }
   present() { // in this line, a function called 'present' is being defined.
-    return 'I have a ' + this.carname; // `this`is self-referring to access the current Car object's carname attribute
+    return 'I have a ' + this.carname; // `this` is self-referring to access the current Car object's carname attribute. String concatenation is also being used, combining the hardcoded string with the object's atteibute 'carname'.
   }
 }
 
 class Model extends Car { // here an class called 'Model' is being defined, and is inheriting all of the properties from the Car class
   constructor(brand, mod) { // `constructor` defines the block of code that will be run when a new instance of Car is created and takes 'brand' as a parameter
-    super(brand); // this line executes the super class' function 
+    super(brand); // this line executes the super class' function of assigning the `brand` parameter as the object's brand attribute
     this.model = mod; // `this`is self-referring in order to declare that whatever is passed into the paramater 'mod' is assigned to the object's 'model' attribute
   }
   show() { // in this line, a function called 'present' is being defined.
-    return this.present() + ', it was made in ' + this.model;
+    return this.present() + ', it was made in ' + this.model; // 
   }
 }
 
-let makes = ["Ford", "Holden", "Toyota"]
-let models = Array.from(new Array(40), (x,i) => i + 1980)
+let makes = ["Ford", "Holden", "Toyota"] // in this line, an array is being seeded with strings and assigned to the variable `makes`
+let models = Array.from(new Array(40), (x,i) => i + 1980) // here the Array.from static method is 
 
-function randomIntFromInterval(min,max) { // min and max included
+function randomIntFromInterval(min,max) { // 
     return Math.floor(Math.random()*(max-min+1)+min);
 }
 
@@ -755,3 +755,5 @@ Etherington M, 2020, JS Classes and Mixins, Academy of Information Technology
 ### Question 13 
 
 Etherington M, 2020, JS Classes and Mixins, Academy of Information Technology
+
+MDN Web Docs, Array.from, developer.mozilla.org, viewed 12 July 2022, <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from>.

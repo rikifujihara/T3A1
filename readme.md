@@ -672,7 +672,7 @@ console.log(coolCar) // will return:
 
 ## JSON
 
-JSON stands for JavaScript Object Notation. It's a format for representing data and is used widely used for APIs. JSON files are very lightweight so can be quickly sent back and forth bewtween clients and servers.
+JSON stands for JavaScript Object Notation. It's a format for representing data and is widely used for APIs. JSON files are very lightweight so can be quickly sent back and forth between clients and servers.
 
 All JSON code is valid JavaScript, and JavaScript can be used to manipulate JSON data.
 
@@ -715,6 +715,46 @@ frank["age"] // returns 5
 
 ```
 
+### Accessing values in nested arrays within JSON using javascript
+
+``` javascript
+var frank = {
+    "species": "Dog"
+    "breed": "Basset Hound"
+    "age": 5
+    "favourite_snacks": [
+        {
+            "description": "tofu strips"
+            "texture": "firm"
+        },
+        {
+            "description": "chicken strips"
+            "texture": "tender"
+        },
+        {
+            "description": "tortillas"
+            "texture": "soft"
+        }
+    ]
+}
+
+frank.favourite_snacks[2].texture // this will return "soft"
+frank["favourite_snacks"][2]["texture"] // this will also return "soft" using bracket notation instead
+```
+
+## Changing JSON from object back to string using JavaScript
+
+JSON objects can be converted back to string format using the `JSON.stringify` method, like in the snippet below. The `JSON.stringify` method takes a JavaScript object as a parameter and converts that object into string format.
+
+``` javascript
+var frank = {
+    "species": "Dog"
+    "breed": "Basset Hound"
+    "age": 5
+}
+
+var stringifiedFrank = JSON.stringify(frank) // will convert the JSON object 'frank' into string format
+```
 
 # Question 13 - Functions, Ranges and Classes
 

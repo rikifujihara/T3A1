@@ -584,7 +584,7 @@ foo["property1"] // returns "value1"
 
 ```
 
-Aside from bracket notation, 'dot notation' can be also be used to access an object's properties like in the example below.
+Aside from bracket notation, 'dot notation' can also be used to access an object's properties like in the example below.
 
 ``` javascript
 const foo = {
@@ -645,7 +645,7 @@ let coupe = new Car("2000", "$5000") // this creates a new instance of the Car o
 
 ## Object composition in JavaScript
 
-Objects can be combined into one by using `Object.assign`, like in the snippet below. The objects passed into `Object.assign` as paramters will be combined into one new object, with the order of the parameters being the order of overriding. That is, an object passed in after another object will override the common attributes they have.
+Objects can be combined into one by using `Object.assign`, like in the snippet below. The objects passed into `Object.assign` as parameters will be combined into one new object, with the order of the parameters being the order of overriding. That is, an object passed in after another object will override the common attributes they have.
 
 ``` javascript
 const car = {
@@ -653,7 +653,7 @@ const car = {
     year: "2007"
 }
 const superCar = {
-    brand: "Ferarri"
+    brand: "Ferrari"
     horsepower: "700"
 }
 const fourWheelDrive = {
@@ -664,7 +664,7 @@ const fourWheelDrive = {
 let coolCar = Object.assign(car, superCar, fourWheelDrive)
 console.log(coolCar) // will return:
 
-// {brand: "Ferarri", year: "2007", horsepower: "700",  fourWheelDrive: true}
+// {brand: "Ferrari", year: "2007", horsepower: "700",  fourWheelDrive: true}
 ```
 
 

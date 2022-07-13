@@ -414,14 +414,6 @@ while (condition){
 
 # Question 8 - Type Coercion
 
-- Double equality operator
-
-``` javascript
-123 == "123"
-```
-
-Javascript notices we are comparing two different data types. When using the double equals operator, JS will change the datatype of one of the elements to match the other, and then perform the comparison. 
-
 ## What is Type Coercion?
 Type coercion is the automatic conversion of a value's data type to another. This differs slightly from type <i>conversion</i> which can be done explicitly. Type coercion, on the other hand, can occur automatically as part of an operation performed using two variables of different data types.
 
@@ -446,12 +438,12 @@ let bar = 100
 foo === bar // returns false
 ```
 
-In this example, the comparison results in false because the data types are not coerced to match eachother.
+In this example, the comparison results in false because the data types are not coerced to match each other.
 
 ### Concatenation
 
-
 In the snippet below, we try to perform addition with the two variables `foo` and `bar`.
+
 ``` javascript
 let foo = "100"
 let bar = 100
@@ -459,6 +451,8 @@ let bar = 100
 let together = foo + bar
 together // returns "100100"
 ```
+
+Thanks to JavaScript's implicit type coercion, it noticed we were trying to perform addition with two variables of different data types. Instead of throwing an error, JavaScript implicitly converted `bar` from a number type to a string. This resulted in string concatenation of `"100" + "100"` instead of an invalid arithmetic operation, which resulted in the value `"100100"`.
 
 # Question 9 - Data types
 

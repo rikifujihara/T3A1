@@ -422,6 +422,44 @@ while (condition){
 
 Javascript notices we are comparing two different data types. When using the double equals operator, JS will change the datatype of one of the elements to match the other, and then perform the comparison. 
 
+## What is Type Coercion?
+Type coercion is the automatic conversion of a value's data type to another. This differs slightly from type <i>conversion</i> which can be done explicitly. Type coercion, on the other hand, can occur automatically as part of an operation performed using two variables of different data types.
+
+### JavaScript equality operator
+For example, in the snippet below, we use the double equals `==` comparison operator to compare the two variables `foo` and `bar`.
+
+``` javascript
+let foo = "100"
+let bar = 100
+
+foo == bar // returns true
+```
+
+JavaScript knows we are trying to compare `foo` and `bar`, but notices that the variables' values are different data types. In order to compare them, JavaScript performs type coercion to change one of the variables' data types to be the same as the other, and then compares the two values. In this case the comparison results in `true` because JavaScript converts the `bar` number type into a string, resulting in `"100" == "100" // => true`.
+
+In the example below, we compare the same variables but with 'strict' equality.
+
+``` javascript
+let foo = "100"
+let bar = 100
+
+foo === bar // returns false
+```
+
+In this example, the comparison results in false because the data types are not coerced to match eachother.
+
+### Concatenation
+
+
+In the snippet below, we try to perform addition with the two variables `foo` and `bar`.
+``` javascript
+let foo = "100"
+let bar = 100
+
+let together = foo + bar
+together // returns "100100"
+```
+
 # Question 9 - Data types
 
 Data types in programming refer to how a variable's data is classified. The classification of the data, or data type, will determine what kind of operations can be performed with it and how they will be performed without causing an error.

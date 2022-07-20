@@ -87,6 +87,11 @@ MERN applications use four technologies to create applications - React for the f
 
 MERN has the benefit of only requiring Javascript and JSON since both the client side and server side are written in Javascript.
 
+### MVC
+
+MVC is the architectural pattern that is followed by many web-development frameworks. MVC divides 'concerns' of the application into discrete roles and functions. The 'view' represents the interface that is presented to the user in the browser. The controller handles the logic of the application, and the model interacts with the database.
+
+React represents the 'view' component of the MVC model. Express and node represent the controller component of the MVC model, and MongoDB represents the 'model' component.
 
 ### MongoDB
 Mongo is the no-SQL database solution. Instead of records and tables, no-SQL uses 'collections'. A schema is not required and relations are not necessary. For security reasons, React does not directly connect with MongoDB - instead it connects via Node and Express. 
@@ -941,6 +946,8 @@ Software Testing Help 2022, What Are The Quality Attributes?, softwaretestinghel
 ### Question 3
 
 IBM technology, What is the MERN stack?, youtube.com, viewed 11 July 2022, <https://www.youtube.com/watch?v=_O6cy4_4uvw>.
+
+Medium, Understanding the MVC Architecture in the MERN Stack, Medium.com, viewed 20 July 2022, <https://shubhamjha25.medium.com/understanding-the-mvc-architecture-in-the-mern-stack-aff893abce50#:~:text=MERN%20isn't%20an%20MVC,the%20server%20and%20the%20browser.>.
 
 YakoHERE, What is the MERN stack?, youtube.com, viewed 11 July 2022, <https://www.youtube.com/watch?v=INyYiwK58mc>.
 

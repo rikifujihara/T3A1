@@ -33,5 +33,5 @@ class Car { // in this line, a class called 'Car' is being defined.
     model = models[randomIntFromInterval(0,models.length-1)]
   
     mycar = new Model(make, model);
-    // console.log(mycar.show())
+    console.log(mycar.show())
   }

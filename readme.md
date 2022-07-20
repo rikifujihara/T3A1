@@ -872,17 +872,20 @@ Overall, this snippet can be described as follows:
 
 First, a `Car` class is created with a constructor `function` which will assign the object's `carname` as the `brand` that's passed in when creating the new instance of a `Car` object. The `Car` class includes a function called `present` which returns a concatenated string.
 
-A `class` called `Model` is extended from the `Car` class, and so has access to the same properties and functions. The `Model` class ins instantiated with two parameters - `brand` and `mod`. The `super` keyword is used to avoid repeating the code that assigns the `brand` parameter to the new object's brand property. The new `Model` object's `model` property is set to the `mod` parameter that's passed in. A function called `show()` is created which calls the function extended from the `Car` class (`present()`) and concatenates the result of the called function with another string.
+A `class` called `Model` is extended from the `Car` class, and so has access to the same properties and functions. The `Model` class is instantiated with two parameters - `brand` and `mod`. The `super` keyword is used to avoid repeating the code that assigns the `brand` parameter to the new object's brand property. The new `Model` object's `model` property is set to the `mod` parameter that's passed in. A function called `show()` is created which calls the function extended from the `Car` class (`present()`) and concatenates the result of the called function with another string.
 
 An array called `makes` is initiated, containing three strings.
 
-An array called `models` is initiated. The array is created using the `Array.from` method, which takes an Array with `40` undefined items. It then iterates over each of those items denoted by `x`, and does addition with the index of the undefined item in the array and the number `1980`. So it would first change the first undefined item in the array with and index of zero, and replace it with `0 + 1980`. On the next iteration it would replace the undefined item in the array with `1 + 1980`, then so on and so forth all the way up till the last undefined element with an index of 39.
+`**` An array called `models` is initiated. The array is created using the `Array.from` method, which takes an Array with `40` undefined items. It then iterates over each of those items denoted by `x`, and does addition with the index of the undefined item in the array and the number `1980`. So it would first change the first undefined item in the array with an index of zero, and replace it with `0 + 1980`. On the next iteration it would replace the undefined item in the array with `1 + 1980`, then so on and so forth all the way up till the last undefined element with an index of 39.
 
 The Array.from method results in an Array containing a `range` of numbers from 1980 to 2019 (`0 +1980` all the way up to `39 + 1980`).
 
 Next, a `function` is defined called `randomIntFromInterval`. It takes two parameters, `min` and `max`. 
 It exists to return a random number from a given range between two numbers. It works by multiplying a `Math.random` (which is a random float between 0 and 1) by a number that evaluates to `max + 1`, then returning the rounded down integer of the resulting float. This effectively returns a random integer between the minimum number and the maximum number + 1.
 
+The next part of the snippet is a `for of loop` that iterates over the `models` array. On each iteration, it creates two variables, `make` and `model`. `make` is one of the strings contained in the `makes` array, chosen by a random index returned from the `randomIntFromInterval` function. `model` is one of the strings contained in the `models` array, chosen by a random index returned from the `randomIntFromInterval` function. The `randomIntFromInterval` function is passed arguments that will result in the range only being as long as the `makes` array minus 1.
+
+With the `make` and `model` variables assigned, a `Model` instance is constructed with `make` and `model` as its parameters. This model then calls its `show` function, the result of which is outputted.
 
 
 
@@ -890,37 +893,37 @@ It exists to return a random number from a given range between two numbers. It w
 
 class Car { // in this line, a class called 'Car' is being defined.
   constructor(brand) { // `constructor` defines the block of code that will be run when a new instance of Car is created and takes 'brand' as a parameter
-    this.carname = brand; // `this`is self-referring in order to declare that whatever is passed into the paramater 'brand' is assigned to the object's 'carname' attribute
+    this.carname = brand; // `this`is self-referring in order to declare that whatever is passed into the parameter 'brand' is assigned to the object's 'carname' attribute
   }
   present() { // in this line, a function called 'present' is being defined.
-    return 'I have a ' + this.carname; // `this` is self-referring to access the current Car object's carname attribute. String concatenation is also being used, combining the hardcoded string with the object's atteibute 'carname'.
+    return 'I have a ' + this.carname; // `this` is self-referring to access the current Car object's carname attribute. String concatenation is also being used, combining the hardcoded string with the object's attribute 'carname'.
   }
 }
 
 class Model extends Car { // here a class called 'Model' is being defined, and is inheriting all of the properties from the Car class
   constructor(brand, mod) { // `constructor` defines the block of code that will be run when a new instance of Car is created and takes 'brand' as a parameter
     super(brand); // this line executes the super class' function of assigning the `brand` parameter as the object's brand attribute
-    this.model = mod; // `this`is self-referring in order to declare that whatever is passed into the paramater 'mod' is assigned to the object's 'model' attribute
+    this.model = mod; // `this`is self-referring in order to declare that whatever is passed into the parameter 'mod' is assigned to the object's 'model' attribute
   }
   show() { // in this line, a function called 'present' is being defined.
-    return this.present() + ', it was made in ' + this.model; // 
+    return this.present() + ', it was made in ' + this.model; // ** refer in summary
   }
 }
 
 let makes = ["Ford", "Holden", "Toyota"] // in this line, an array is being seeded with strings and assigned to the variable `makes`
-let models = Array.from(new Array(40), (x,i) => i + 1980) // here the Array.from static method is used to create a new array
+let models = Array.from(new Array(40), (x,i) => i + 1980) // ** reference
 
-function randomIntFromInterval(min,max) { // 
-    return Math.floor(Math.random()*(max-min+1)+min);
+function randomIntFromInterval(min,max) { // function being created called randomIntFromInterval taking two parameters min and max
+    return Math.floor(Math.random()*(max-min+1)+min); // Math.floor method called to round down to a random integer
 }
 
-for (model of models) {
+for (model of models) { // 'for of loop' iterates over the `models` array
 
-  make = makes[randomIntFromInterval(0,makes.length-1)]
-  model = models[randomIntFromInterval(0,makes.length-1)]
+  make = makes[randomIntFromInterval(0,makes.length-1)] // assigns one of the values in the `makes` array to the variable `make` using a random index within the Array's range
+  model = models[randomIntFromInterval(0,makes.length-1)]// assigns one of the values in the `makes` array to the variable `make` using a random index within the Array's range. It should say (0,models.length-1) instead because this way it will be a random index from the range of the intended array.
 
-  mycar = new Model(make, model);
-  console.log(mycar.show())
+  mycar = new Model(make, model); // creates a new instance of the `Model` class using the previously assigned variables as parameters
+  console.log(mycar.show()) // outputs the result from the newly created object's function `show`.
 }
 ```
 

@@ -866,7 +866,28 @@ var stringifiedFrank = JSON.stringify(frank) // will convert the JSON object 'fr
 
 # Question 13 - Functions, Ranges and Classes
 
+## Overall function
+
+Overall, this snippet can be described as follows:
+
+First, a `Car` class is created with a constructor `function` which will assign the object's `carname` as the `brand` that's passed in when creating the new instance of a `Car` object. The `Car` class includes a function called `present` which returns a concatenated string.
+
+A `class` called `Model` is extended from the `Car` class, and so has access to the same properties and functions. The `Model` class ins instantiated with two parameters - `brand` and `mod`. The `super` keyword is used to avoid repeating the code that assigns the `brand` parameter to the new object's brand property. The new `Model` object's `model` property is set to the `mod` parameter that's passed in. A function called `show()` is created which calls the function extended from the `Car` class (`present()`) and concatenates the result of the called function with another string.
+
+An array called `makes` is initiated, containing three strings.
+
+An array called `models` is initiated. The array is created using the `Array.from` method, which takes an Array with `40` undefined items. It then iterates over each of those items denoted by `x`, and does addition with the index of the undefined item in the array and the number `1980`. So it would first change the first undefined item in the array with and index of zero, and replace it with `0 + 1980`. On the next iteration it would replace the undefined item in the array with `1 + 1980`, then so on and so forth all the way up till the last undefined element with an index of 39.
+
+The Array.from method results in an Array containing a `range` of numbers from 1980 to 2019 (`0 +1980` all the way up to `39 + 1980`).
+
+Next, a `function` is defined called `randomIntFromInterval`. It takes two parameters, `min` and `max`. 
+It exists to return a random number from a given range between two numbers. It works by multiplying a `Math.random` (which is a random float between 0 and 1) by a number that evaluates to `max + 1`, then returning the rounded down integer of the resulting float. This effectively returns a random integer between the minimum number and the maximum number + 1.
+
+
+
+
 ``` javascript
+
 class Car { // in this line, a class called 'Car' is being defined.
   constructor(brand) { // `constructor` defines the block of code that will be run when a new instance of Car is created and takes 'brand' as a parameter
     this.carname = brand; // `this`is self-referring in order to declare that whatever is passed into the paramater 'brand' is assigned to the object's 'carname' attribute
